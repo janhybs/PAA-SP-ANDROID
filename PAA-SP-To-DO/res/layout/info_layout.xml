@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    style="@style/AppBaseThemeDark">
+
+    <TextView
+        android:id="@+id/devAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/developer_app_name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="38sp" />
+
+    <TextView
+        android:id="@+id/devName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/devAppName"
+        android:layout_below="@+id/devAppName"
+        android:layout_toLeftOf="@+id/devVersion"
+        android:text="@string/developer_name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/devVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/devAppName"
+        android:layout_alignTop="@+id/devName"
+        android:text="@string/developer_version"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/devEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/devName"
+        android:layout_below="@+id/devName"
+        android:layout_toLeftOf="@+id/devVersion"
+        android:text="@string/developer_e_mail"
+        android:textSize="10sp" />
+
+</RelativeLayout>

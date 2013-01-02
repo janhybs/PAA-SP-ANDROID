@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="menu_settings">Nastavení</string>
+    <string name="choose_group">Vyber skupinu</string>
+    <string name="choose_action">Vyber akci</string>
+    <string name="about">O aplikaci</string>
+    
+    
+    <string name="dialog_yes">Ano</string>
+    <string name="dialog_no">Ne</string>
+    <string name="dialog_delete_task">Opravdu chcete smazat tento úkol?</string>
+    <string name="dialog_delete_group">Opravdu chcete smazat tuto skupinu?</string>
+    <string name="please_fill_task">Musíš vyplnit název</string>
+    <string name="empty_group">Skupina je prázdná</string>
+    
+    
+    <string name="cancel">Zrušit</string>
+    <string name="edit">Upravit</string>
+    <string name="yes">Ano</string>
+    <string name="no">Ne</string>
+    <string name="create">Vytvořit</string>
+    
+    
+    <string name="edit_task_layout_title">Název</string>
+    <string name="edit_task_layout_description">Popis</string>
+    <string name="edit_task_layout_status">Ukončený</string>
+    <string name="edit_task_layout_header">Upravit úkol</string>
+    <string name="add_task_header">Přidat úkol</string>
+    <string name="add_group_header">Vytvořit skupinu</string>
+    <string name="edit_group_header">Upravit skupinu</string>
+
+    
+    <string name="error_insert_group">Nastala chyby při vytváření skupiny.</string>
+    <string name="error_insert_task">Nastala chyby při vytváření úkolu.</string>
+    <string name="error_edit_group">Nastala chyby při upravě skupiny.</string>
+    <string name="error_edit_task">Nastala chyby při upravě úkolu.</string>
+    <string name="error_delete_group">Nastala chyby při mazání skupiny.</string>
+    <string name="error_delete_task">Nastala chyby při mazání úkolu.</string>
+    <string name="operation_success">Hotovo</string>
+    
+    
+    <string name="edit_task">Upravit úkol</string>
+    <string name="edit_group">Upravit skupinu</string>
+    <string name="delete_task">Smazat úkol</string>
+    <string name="delete_group">Smazat skupinu</string>
+    
+    <string name="send_email">Poslat e-mail</string>
+    
+</resources>

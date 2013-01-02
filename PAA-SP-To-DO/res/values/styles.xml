@@ -1,0 +1,17 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.   -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+
+    </style>
+    
+    
+    <style name="AppBaseThemeDark" parent="android:Theme.Holo">
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+    </style>
+ 
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="task_setting">
+        <item>Upravit úkol</item>
+        <item>Smazat úkol</item>
+    </string-array>
+</resources>

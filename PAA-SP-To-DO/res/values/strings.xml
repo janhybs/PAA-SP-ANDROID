@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="menu_settings">Settings</string>
+    <string name="choose_group">Choose Group</string>
+    <string name="choose_action">Choose action</string>
+    <string name="about">About</string>
+    
+    
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+    <string name="dialog_delete_task">Do you really want to delete this Task?</string>
+    <string name="dialog_delete_group">Do you really want to delete this Group?</string>
+    <string name="please_fill_task">You must fill title!</string>
+    <string name="empty_group">Group is empty</string>
+    
+    <string name="cancel">Cancel</string>
+    <string name="edit">Edit</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="create">Create</string>
+    
+    
+    <string name="edit_task_layout_title">Title</string>
+    <string name="edit_task_layout_description">Description</string>
+    <string name="edit_task_layout_status">Finished</string>
+    <string name="edit_task_layout_header">Edit Task</string>
+    <string name="add_task_header">Add Task</string>
+    <string name="add_group_header">Create Group</string>
+    <string name="edit_group_header">Edit Group</string>
+
+    
+    <string name="error_insert_group">Error occurred while creating new Group</string>
+    <string name="error_insert_task">Error occurred while creating new Task</string>
+    <string name="error_edit_group">Error occurred while editing Group</string>
+    <string name="error_edit_task">Error occurred while editing Task</string>
+    <string name="error_delete_group">Error occurred while editing Group</string>
+    <string name="error_delete_task">Error occurred while editing Task</string>
+    <string name="operation_success">Done</string>
+    
+    
+    <string name="edit_task">Edit Task</string>
+    <string name="edit_group">Edit Group</string>
+    <string name="delete_task">Delete Task</string>
+    <string name="delete_group">Delete Group</string>
+    
+    <string name="send_email">Send Email</string>
+    
+    
+    <string name="app_name">PAA-SP</string>
+    <string name="developer_name">Jan Hybš</string>
+    <string name="developer_app_name">Too Doo list</string>
+    <string name="developer_e_mail">x3mSpeedy@gmail.com</string>
+    <string name="developer_version">1.0.13.1.2.2255</string>
+    
+
+    
+</resources>
