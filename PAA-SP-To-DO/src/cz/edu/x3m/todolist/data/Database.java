@@ -25,34 +25,22 @@ public class Database {
 	 * --------------------------------------------------------------------------
 	 */
 
-	/**
-	 * @return array of all groups or empty array
-	 */
 	public Group[] getGroups() {
 		return DatabaseHelper.toGroupArray(openHelper.getReadableDatabase().query(DatabaseHelper.TABLE_GROUPS.NAME,
 				DatabaseHelper.TABLE_GROUPS.COLUMNS_NAMES, null, null, null, null, null));
 	}
 
-	/**
-	 * @return all tasks in specific group
-	 */
 	public Task[] getTasks(long gid) {
 		return DatabaseHelper.toTaskArray(openHelper.getReadableDatabase().query(DatabaseHelper.TABLE_TASKS.NAME,
 				DatabaseHelper.TABLE_TASKS.COLUMNS_NAMES, "gid = ?", new String[] { gid + "" }, null, null, null));
 	}
 
-	/**
-	 * @return certain task specified by id
-	 */
 	public Task getTask(long id) {
 		return DatabaseHelper.toTask(openHelper.getReadableDatabase().query(DatabaseHelper.TABLE_TASKS.NAME,
 				DatabaseHelper.TABLE_TASKS.COLUMNS_NAMES, "_id = ?", new String[] { String.valueOf(id) }, null, null,
 				null));
 	}
 
-	/**
-	 * @return certain group specified by id
-	 */
 	public Group getGroup(long id) {
 		return DatabaseHelper.toGroup(openHelper.getReadableDatabase().query(DatabaseHelper.TABLE_GROUPS.NAME,
 				DatabaseHelper.TABLE_GROUPS.COLUMNS_NAMES, "_id = ?", new String[] { String.valueOf(id) }, null, null,
@@ -65,9 +53,6 @@ public class Database {
 	 * --------------------------------------------------------------------------
 	 */
 
-	/**
-	 * @return insert id (-1 on error)
-	 */
 	public long insertGroup(Group group) {
 		database = openHelper.getWritableDatabase();
 		ContentValues values = new ContentValues();
@@ -79,11 +64,6 @@ public class Database {
 		return id;
 	}
 
-	/**
-	 * Insert task (may overwrite)
-	 * 
-	 * @return insert id
-	 */
 	public long insertTask(Task task) {
 		database = openHelper.getWritableDatabase();
 		ContentValues values = new ContentValues();
@@ -98,19 +78,16 @@ public class Database {
 		return id;
 	}
 
-	/**
-	 * Insert default sequence (groups and tasks)
-	 */
 	public void insertDefault() {
 
 		long id;
 		fireEvents = false;
 
 		id = insertGroup(new Group("Hlavní skupina", "Ty nejdùležitìjší úkoly"));
-		insertTask(new Task(id, "Váš první úkol!",
-				"V každé skupinì mùže být mnoho úkolù. Kliknutím na tento text, oznaèíte úkol za splnìný"));
+		insertTask(new Task(id, "Váš první úkol!", "V každé skupinì mùže být mnoho úkolù. Kliknutím na tento text, oznaèíte úkol za splnìný"));
 		insertTask(new Task(id, "Váš druhý úkol!", "Smazání nebo jinou úpravu úkolu, provedete dlouhým kliknutím"));
-
+		
+		
 		id = insertGroup(new Group("Prázdná skupina", "Nic moc"));
 		// # nothing
 
@@ -127,9 +104,6 @@ public class Database {
 	 * --------------------------------------------------------------------------
 	 */
 
-	/**
-	 * @return deleted group count (0|1)
-	 */
 	public int deleteGroup(long id) {
 		database = openHelper.getWritableDatabase();
 		int del = database.delete(DatabaseHelper.TABLE_GROUPS.NAME, "_id = ?", new String[] { String.valueOf(id) });
@@ -140,9 +114,6 @@ public class Database {
 		return del;
 	}
 
-	/**
-	 * @return group count
-	 */
 	public int deleteGroups() {
 		database = openHelper.getWritableDatabase();
 		int del = database.delete(DatabaseHelper.TABLE_GROUPS.NAME, null, null);
@@ -153,9 +124,6 @@ public class Database {
 		return del;
 	}
 
-	/**
-	 * @return deleted task count
-	 */
 	public int deleteTask(long id) {
 		database = openHelper.getWritableDatabase();
 		int del = database.delete(DatabaseHelper.TABLE_TASKS.NAME, "_id = ?", new String[] { String.valueOf(id) });
@@ -165,11 +133,6 @@ public class Database {
 		return del;
 	}
 
-	/**
-	 * Delete all task from specific group
-	 * 
-	 * @return deleted task count
-	 */
 	public int deleteTasks(long id) {
 		database = openHelper.getWritableDatabase();
 		int del = database.delete(DatabaseHelper.TABLE_TASKS.NAME, "gid = ?", new String[] { String.valueOf(id) });
@@ -185,9 +148,6 @@ public class Database {
 	 * --------------------------------------------------------------------------
 	 */
 
-	/**
-	 * @return affected rows (0|1)
-	 */
 	public int editGroup(long id, Group group) {
 		database = openHelper.getWritableDatabase();
 		ContentValues values = new ContentValues();
@@ -200,9 +160,6 @@ public class Database {
 		return affected;
 	}
 
-	/**
-	 * @return affected rows (0|1)
-	 */
 	public int editTask(long id, Task task) {
 		database = openHelper.getWritableDatabase();
 		ContentValues values = new ContentValues();
@@ -217,9 +174,6 @@ public class Database {
 		return affected;
 	}
 
-	/**
-	 * @return affected rows (0|1), should be always 1
-	 */
 	public int switchTaskStatus(long id) {
 		Task task = getTask(id);
 		System.out.println(task.info());
@@ -233,9 +187,6 @@ public class Database {
 		return affected;
 	}
 
-	/**
-	 * @return affected rows (0|1)
-	 */
 	public int setTaskStatus(long id, long status) {
 		database = openHelper.getWritableDatabase();
 		ContentValues values = new ContentValues();
