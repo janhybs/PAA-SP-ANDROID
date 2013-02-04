@@ -24,6 +24,10 @@ public class SQLTable {
 		return createTable ();
 	}
 	
+	/**
+	 * Creates "create table" query
+	 * @return string
+	 */
 	public String createTable () {
 		StringBuilder result = new StringBuilder ("CREATE TABLE ");
 		result.append (NAME);
@@ -37,6 +41,10 @@ public class SQLTable {
 		return result.toString ();
 	}
 	
+	/**
+	 * Creates "drop table" query
+	 * @return string
+	 */
 	public String deleteTable () {
 		return String.format ("DROP TABLE IF EXISTS %s", NAME);
 	}
