@@ -18,7 +18,7 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+				<category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -27,6 +27,8 @@
         <activity android:name="cz.edu.x3m.todolist.manipulation.EditTaskActivity"></activity>
         <activity android:name="cz.edu.x3m.todolist.manipulation.EditGroupActivity"></activity>
         <activity android:name="cz.edu.x3m.todolist.utils.InfoActivity"></activity>
+        
+        <meta-data android:name="com.sec.android.support.multiwindow" android:value="true" />
     </application>
 
 </manifest>
