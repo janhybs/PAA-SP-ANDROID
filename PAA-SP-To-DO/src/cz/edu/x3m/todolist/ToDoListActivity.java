@@ -182,6 +182,23 @@ public class ToDoListActivity extends Activity implements DatabaseListener {
 	public void onTaskItemChanged(Task task) {
 		taskAdapter.notifyDataSetChanged();
 	}
+	
+
+	class TaskListener implements OnItemClickListener, OnItemLongClickListener {
+
+		@Override
+		public boolean onItemLongClick(AdapterView<?> listView, View row, int pos, long id) {
+			onTaskItemLongClick(pos);
+			return true;
+		}
+
+		@Override
+		public void onItemClick(AdapterView<?> listView, View row, int pos, long id) {
+			onTaskItemClick(pos);
+			return;
+		}
+
+	}
 
 	class GroupListener implements OnItemSelectedListener, OnLongClickListener {
 
@@ -205,19 +222,4 @@ public class ToDoListActivity extends Activity implements DatabaseListener {
 
 	}
 
-	class TaskListener implements OnItemClickListener, OnItemLongClickListener {
-
-		@Override
-		public boolean onItemLongClick(AdapterView<?> listView, View row, int pos, long id) {
-			onTaskItemLongClick(pos);
-			return true;
-		}
-
-		@Override
-		public void onItemClick(AdapterView<?> listView, View row, int pos, long id) {
-			onTaskItemClick(pos);
-			return;
-		}
-
-	}
 }
